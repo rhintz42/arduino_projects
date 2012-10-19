@@ -14,17 +14,18 @@ void loop() {
     int mes = Serial.read();
     while (true) {
       if(mes == 'k') {
+        delay(2);
         mes = Serial.read();
-        Serial.print('1');
-        Serial.print("Hey");
         if(mes == 'k') {
-          //mes = Serial.read();
-          //if(mes == 'z') {
-            //mes = Serial.read();
-            //if(mes == 'x') {
+          delay(2);
+          mes = Serial.read();
+          if(mes == 'z') {
+            delay(2);
+            mes = Serial.read();
+            if(mes == 'x') {
               break;
-            //}
-          //}
+            }
+          }
         }
       }
       //if(mes == '\x00')
