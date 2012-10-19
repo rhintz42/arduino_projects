@@ -13,8 +13,22 @@ void loop() {
   if(Serial.available() > 0) {
     int mes = Serial.read();
     while (true) {
-      if(mes == 'k')
-        break;
+      if(mes == 'k') {
+        mes = Serial.read();
+        Serial.print('1');
+        Serial.print("Hey");
+        if(mes == 'k') {
+          //mes = Serial.read();
+          //if(mes == 'z') {
+            //mes = Serial.read();
+            //if(mes == 'x') {
+              break;
+            //}
+          //}
+        }
+      }
+      //if(mes == '\x00')
+      //  break;
       mes = Serial.read();
       /* Need to fix this thing to make it so when reaches end it goes out of while loop */
       //if (mes < 0)
